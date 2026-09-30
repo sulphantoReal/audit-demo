@@ -16,6 +16,12 @@ db.serialize(() => {
     db.run("INSERT INTO users VALUES (2, 'alice', 'user')");
 });
 
+// --- Option 2: File Verification Route ---
+app.get('/.well-known/hmw-verify.txt', (req, res) => {
+    res.type('text/plain');
+    res.send('2ac7b84079db40a0c5e6b8d9ebc79db5');
+});
+
 // 1. Home page (Missing Security Headers)
 app.get('/', (req, res) => {
     res.send(`

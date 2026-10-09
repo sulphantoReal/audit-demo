@@ -66,3 +66,6 @@ app.get('/stress-test', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
+app.get('/.well-known/hmw-verify.txt', (req, res) => {
+  res.type('text/plain').send('2f639d3a11dac0c21a690cc0122e790d');
+});

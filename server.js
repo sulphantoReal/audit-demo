@@ -18,8 +18,7 @@ db.serialize(() => {
 
 // --- Option 2: File Verification Route ---
 app.get('/.well-known/hmw-verify.txt', (req, res) => {
-    res.type('text/plain');
-    res.send('2ac7b84079db40a0c5e6b8d9ebc79db5');
+  res.type('text/plain').send('2f639d3a11dac0c21a690cc0122e790d');
 });
 
 // 1. Home page (Missing Security Headers)
@@ -65,7 +64,4 @@ app.get('/stress-test', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
-});
-app.get('/.well-known/hmw-verify.txt', (req, res) => {
-  res.type('text/plain').send('2f639d3a11dac0c21a690cc0122e790d');
 });

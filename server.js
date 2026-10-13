@@ -19,7 +19,7 @@ db.serialize(() => {
 // --- Option 2: File Verification Route ---
 app.get('/.well-known/hackmywebsite.txt', (req, res) => {
     res.type('text/plain');
-    res.send('3e3ff922335cb03bde87081904e09893');
+    res.send('hmw-verify=3e3ff922335cb03bde87081904e09893');
 });
 
 // 1. Home page (Missing Security Headers)

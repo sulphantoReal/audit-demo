@@ -17,8 +17,9 @@ db.serialize(() => {
 });
 
 // --- Option 2: File Verification Route ---
-app.get('/.well-known/hmw-verify.txt', (req, res) => {
-  res.type('text/plain').send('2f639d3a11dac0c21a690cc0122e790d');
+app.get('/.well-known/hackmywebsite.txt', (req, res) => {
+    res.type('text/plain');
+    res.send('3e3ff922335cb03bde87081904e09893');
 });
 
 // 1. Home page (Missing Security Headers)
